@@ -1,0 +1,31 @@
+$logo-text-color: #292929;
+$primary-color: #007bff;
+$transition-speed: 0.3s ease;
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $logo-text-color;
+
+    &:hover {
+        .logoText {
+            color: $primary-color;
+        }
+        .logoImage {
+            transform: rotate(-10deg) scale(1.1);
+        }
+    }
+}
+.logoImage {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    transition: transform $transition-speed;
+}
+
+.logoText {
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color $transition-speed;
+}
