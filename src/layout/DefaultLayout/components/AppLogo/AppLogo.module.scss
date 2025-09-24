@@ -13,7 +13,7 @@ $transition-speed: 0.3s ease;
             color: $primary-color;
         }
         .logoImage {
-            transform: rotate(-10deg) scale(1.1);
+            transform: scale(1.1);
         }
     }
 }
@@ -21,6 +21,7 @@ $transition-speed: 0.3s ease;
     width: 32px;
     height: 32px;
     margin-right: 12px;
+    border-radius: 4px;
     transition: transform $transition-speed;
 }
 

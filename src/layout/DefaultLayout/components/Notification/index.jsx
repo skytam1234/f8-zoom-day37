@@ -25,7 +25,7 @@ function Notification() {
         ];
         setNotifications(notifications);
         const hangdleOver = (e) => {
-            if (notifCp.current && !notifCp.current.constant(e.target())) {
+            if (notifCp.current && !notifCp.current.contains(e.target)) {
                 setIsOpen(false);
             }
         };
@@ -33,7 +33,7 @@ function Notification() {
         return () => {
             document.removeEventListener("click", hangdleOver);
         };
-    }, [isOpen, notifications]);
+    }, [isOpen]);
 
     return (
         <div className={styles.notification} ref={notifCp}>

@@ -1,0 +1,16 @@
+.header {
+    position: sticky;
+    top: 0px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2dede;
+    background: #fff;
+}
+.action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

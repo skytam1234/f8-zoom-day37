@@ -13,7 +13,7 @@ function MyCourses() {
         ];
         setCourses(courses);
         const hangdle = (e) => {
-            if (dropdown.current && !dropdown.current.constant(e.target())) {
+            if (dropdown.current && !dropdown.current.contains(e.target)) {
                 setIsOpen(false);
             }
         };
@@ -21,7 +21,7 @@ function MyCourses() {
         return () => {
             document.removeEventListener("click", hangdle);
         };
-    }, [isOpen, courses]);
+    }, []);
     return (
         <div className={styles.myCourses} ref={dropdown}>
             <button
