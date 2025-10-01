@@ -1,17 +1,18 @@
 .header {
-    position: sticky;
-    top: 0px;
-    box-sizing: border-box;
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #e2dede;
-    border-top: 1px solid #e2dede;
-    background: #fff;
+  position: sticky;
+  top: 0px;
+  box-sizing: border-box;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2dede;
+  border-top: 1px solid #e2dede;
+  background: #fff;
+  z-index: 999;
 }
 .action {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

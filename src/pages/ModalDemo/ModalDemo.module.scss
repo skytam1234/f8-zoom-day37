@@ -1,13 +1,16 @@
 .modal-item {
-    margin-bottom: 20px;
-    > button {
-        transition: all 300ms;
-        &:hover {
-            scale: 1.2;
-            background: #eecece;
-        }
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > button {
+    transition: all 300ms;
+    &:hover {
+      scale: 1.2;
+      background: #eecece;
     }
+  }
 }
 .custom-modal {
-    background-color: red;
+  background-color: red;
 }
