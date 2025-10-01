@@ -1,0 +1,13 @@
+.modal-item {
+    margin-bottom: 20px;
+    > button {
+        transition: all 300ms;
+        &:hover {
+            scale: 1.2;
+            background: #eecece;
+        }
+    }
+}
+.custom-modal {
+    background-color: red;
+}
