@@ -22,6 +22,11 @@ const navbarList = [
         label: "Scroll Demo",
         icon: "fa-solid fa-scroll",
     },
+    {
+        to: "/performance-demo",
+        label: "PerformanceDemo",
+        icon: "fa-solid fa-calculator",
+    },
 ];
 
 function Navigation() {
