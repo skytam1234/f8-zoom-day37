@@ -32,6 +32,11 @@ const navbarList = [
         label: "FocusDemo",
         icon: "fa-solid fa-calculator",
     },
+    {
+        to: "/hoc-demo",
+        label: "HOCDemo",
+        icon: "fa-solid fa-calculator",
+    },
 ];
 
 function Navigation() {
