@@ -7,6 +7,8 @@ import Profile from "../../pages/Profile";
 import PerformanceDemo from "../../pages/PerformanceDemo";
 import FocusDemo from "../../pages/FocusDemo";
 import HocDemo from "../../pages/HOCDemo";
+import RenderPropsDemo from "../../pages/RenderPropsDemo";
+import CustomHooksDemo from "../../pages/CustomHooksDemo";
 
 function AppRoute() {
     return (
@@ -18,11 +20,20 @@ function AppRoute() {
                     <Route path="/modal-demo" element={<ModalDemo />} />
                     <Route path="/scroll-demo" element={<ScrollDemo />} />
                     <Route path="/hoc-demo" element={<HocDemo />} />
+
+                    <Route
+                        path="/render-props-demo"
+                        element={<RenderPropsDemo />}
+                    />
                     <Route
                         path="/performance-demo"
                         element={<PerformanceDemo />}
                     />
-                    <Route path="//focus-demo" element={<FocusDemo />} />
+                    <Route
+                        path="/custom-hooks-demo"
+                        element={<CustomHooksDemo />}
+                    />
+                    <Route path="/focus-demo" element={<FocusDemo />} />
                 </Route>
             </Routes>
         </Router>

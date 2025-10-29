@@ -37,6 +37,16 @@ const navbarList = [
         label: "HOCDemo",
         icon: "fa-solid fa-calculator",
     },
+    {
+        to: "/render-props-demo",
+        label: "render-props-demo",
+        icon: "fa-solid fa-calculator",
+    },
+    {
+        to: "/custom-hooks-demo",
+        label: "custom-hooks-demo",
+        icon: "fa-solid fa-calculator",
+    },
 ];
 
 function Navigation() {
