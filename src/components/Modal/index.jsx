@@ -37,6 +37,9 @@ const Modal = forwardRef(
         close: () => {
           setIsOpen(false);
         },
+        toggle: () => {
+          setIsOpen((prev) => !prev);
+        },
       }),
       []
     );

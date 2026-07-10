@@ -1,25 +1,17 @@
-import { useState } from "react";
+import styles from "./withLoading.module.scss";
 
 function withLoading(Component) {
-    const WrappedComponent = () => {
-        const [isLoading, setIsLoading] = useState(true);
-
-        const toggleLoading = () => {
-            setIsLoading((prev) => !prev);
-        };
-        return (
-            <>
-                <button
-                    onClick={() => {
-                        toggleLoading();
-                    }}
-                >
-                    Toggle
-                </button>
-                <Component isLoading={isLoading} />
-            </>
-        );
+    return function WrappedComponent({ isLoading, ...props }) {
+        if (isLoading) {
+            return (
+                <div className={styles.loadingContainer}>
+                    <div className={styles.spinner}></div>
+                    <p>Đang tải...</p>
+                </div>
+            );
+        }
+        return <Component {...props} />;
     };
-    return WrappedComponent;
 }
+
 export default withLoading;

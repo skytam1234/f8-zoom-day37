@@ -13,6 +13,7 @@ function ModalDemo() {
   const [isOpen7, setIsOpen7] = useState(false);
   const modalRef6 = useRef();
   const modalRef7 = useRef();
+
   return (
     <>
       <div className={styles["modal-item"]}>
@@ -38,9 +39,9 @@ function ModalDemo() {
           onClick={() => {
             setIsOpen1(true);
           }}
-        >
-          Modal với Animation
-        </button>
+          >
+            Modal với Animation
+          </button>
         <Modal
           isOpen={isOpen1}
           onRequestClose={() => {
@@ -57,7 +58,7 @@ function ModalDemo() {
           onClick={() => {
             setIsOpen2(true);
           }}
-        >
+          >
           Modal không đóng khi click overlay
         </button>
         <Modal
@@ -83,7 +84,7 @@ function ModalDemo() {
           onClick={() => {
             setIsOpen3(true);
           }}
-        >
+          >
           Modal không đóng khi nhấn Esc
         </button>
         <Modal
@@ -109,7 +110,7 @@ function ModalDemo() {
           onClick={() => {
             setIsOpen4(true);
           }}
-        >
+          >
           Modal với custom className
         </button>
         <Modal
@@ -134,7 +135,7 @@ function ModalDemo() {
           onClick={() => {
             setIsOpen5(true);
           }}
-        >
+          >
           Modal với callbacks
         </button>
         <Modal
@@ -160,7 +161,7 @@ function ModalDemo() {
           onClick={() => {
             modalRef6.current.open();
           }}
-        >
+          >
           ModalFix
         </button>
         <ModalFix
@@ -187,8 +188,8 @@ function ModalDemo() {
           onClick={() => {
             modalRef7.current.open();
           }}
-        >
-          Modal new
+          >
+          Modal với ref (open/close/toggle)
         </button>
         <Modal
           ref={modalRef7}
@@ -197,15 +198,20 @@ function ModalDemo() {
           onRequestClose={() => {
             modalRef7.current.close();
           }}
-          closeTimeoutMS={1000}
+          closeTimeoutMS={300}
           overlayClassName="custom-overlay"
           bodyOpenClassName="modal"
           htmlOpenClassName="modal-open"
           shouldCloseOnOverlayClick={true}
           shouldCloseOnEsc={true}
         >
-          <h2>Modal với callbacks</h2>
-          <button>Modal với callbacks</button>
+          <h2>Modal với ref (open/close/toggle)</h2>
+          <p>Sử dụng các phương thức: open(), close(), toggle()</p>
+          <div style={{ display: "flex", gap: "8px", marginTop: "16px" }}>
+            <button onClick={() => modalRef7.current.open()}>Open</button>
+            <button onClick={() => modalRef7.current.close()}>Close</button>
+            <button onClick={() => modalRef7.current.toggle()}>Toggle</button>
+          </div>
         </Modal>
       </div>
     </>

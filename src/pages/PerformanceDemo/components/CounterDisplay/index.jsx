@@ -1,19 +1,25 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import styles from "./CounterDisplay.module.scss";
 
-const CounterDisplay = memo(({ counter }) => {
+const CounterDisplay = memo(({ count, name }) => {
+    useEffect(() => {
+        console.log("CounterDisplay re-rendered");
+    });
+
     return (
         <div className={styles.preview}>
             <h2
                 className={styles.previewNumber}
                 style={{
-                    color: counter > 0 ? "green" : counter < 0 ? "red" : "gray",
+                    color: count > 0 ? "green" : count < 0 ? "red" : "gray",
                 }}
             >
-                {counter}
+                Count: {count}
             </h2>
+            <p className={styles.name}>Name: {name}</p>
         </div>
     );
 });
+
 CounterDisplay.displayName = "CounterDisplay";
 export default CounterDisplay;

@@ -1,7 +1,11 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import styles from "./ActionButtons.module.scss";
 
-const ActionButtons = memo(({ onIncrement, onReset, onDecrease }) => {
+const ActionButtons = memo(({ onIncrement, onReset }) => {
+    useEffect(() => {
+        console.log("ActionButtons re-rendered");
+    });
+
     return (
         <div className={styles.control}>
             <div className={styles.controlContent}>
@@ -9,14 +13,12 @@ const ActionButtons = memo(({ onIncrement, onReset, onDecrease }) => {
                     Tăng
                 </div>
                 <div className={styles.resetBtn} onClick={onReset}>
-                    Bắt đầu
-                </div>
-                <div className={styles.decreaseBtn} onClick={onDecrease}>
-                    Giảm
+                    Reset
                 </div>
             </div>
         </div>
     );
 });
+
 ActionButtons.displayName = "ActionButtons";
 export default ActionButtons;

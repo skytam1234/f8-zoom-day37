@@ -8,11 +8,11 @@ function RefetchPosts() {
         "https://jsonplaceholder.typicode.com/posts"
     );
     if (loading) return <div className={styles.spinner}></div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Lỗi: {error}</div>;
 
     return (
         <div>
-            <button onClick={refetch}>Refetch Posts</button>
+            <button onClick={refetch}>Tải lại Posts</button>
 
             {data?.map((item) => (
                 <div key={item.id}>{item.title}</div>
@@ -25,11 +25,11 @@ function RefetchUsers() {
         "https://jsonplaceholder.typicode.com/users"
     );
     if (loading) return <div className={styles.spinner}></div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Lỗi: {error}</div>;
 
     return (
         <div>
-            <button onClick={refetch}>Refetch Users</button>
+            <button onClick={refetch}>Tải lại Users</button>
 
             {data?.map((item) => (
                 <div key={item.id}>{item.name}</div>
@@ -43,14 +43,14 @@ function ToggleUsers() {
         "https://jsonplaceholder.typicode.com/users"
     );
     if (loading) return <div className={styles.spinner}></div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Lỗi: {error}</div>;
 
     return (
         <div>
             <button onClick={toggleVisible}>
-                {isVisible ? "Hide" : "Show"} User
+                {isVisible ? "Ẩn" : "Hiện"} Users
             </button>
-            <button onClick={() => setVisible(true)}>Force Show</button>
+            <button onClick={() => setVisible(true)}>Bắt buộc hiện</button>
 
             {isVisible &&
                 data?.map((item) => <div key={item.id}>{item.name}</div>)}
@@ -63,14 +63,14 @@ function TogglePosts() {
         "https://jsonplaceholder.typicode.com/posts"
     );
     if (loading) return <div className={styles.spinner}></div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Lỗi: {error}</div>;
 
     return (
         <div>
             <button onClick={toggleVisible}>
-                {isVisible ? "Hide" : "Show"} Posts
+                {isVisible ? "Ẩn" : "Hiện"} Posts
             </button>
-            <button onClick={() => setVisible(true)}>Force Show</button>
+            <button onClick={() => setVisible(true)}>Bắt buộc hiện</button>
 
             {isVisible &&
                 data?.map((item) => <div key={item.id}>{item.title}</div>)}
@@ -96,7 +96,7 @@ function ToggleTheme() {
                 toggleVisible();
             }}
         >
-            Change Theme
+            Đổi Theme
         </button>
     );
 }
@@ -104,6 +104,7 @@ function ToggleTheme() {
 function CustomHooksDemo() {
     return (
         <div>
+            <h1>Custom Hooks Demo - useApi & useToggle</h1>
             <RefetchUsers />
             <br></br>
             <RefetchPosts />
